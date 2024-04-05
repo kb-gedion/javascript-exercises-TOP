@@ -5,12 +5,13 @@ const removeFromArray = function(arr, ...items) {
         for (const item of items) {
             if (arr[i] === item) {
                 arr.splice(i, 1);
+                // adjust for resizing array
                 i--;
                 len--;
             }
         }
     }
-    
+
     return arr;
 };
 
